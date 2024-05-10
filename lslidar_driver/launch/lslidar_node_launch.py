@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 import os
 
-import lifecycle_msgs.msg
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import LifecycleNode
-from launch_ros.actions import Node
 
 
 def generate_launch_description():
@@ -22,17 +18,6 @@ def generate_launch_description():
                                 parameters=[driver_dir],
                                 )
 
-    rviz_dir = os.path.join(get_package_share_directory('lslidar_driver'), 'rviz', 'lslidar.rviz')
-
-    rviz_node = Node(
-        package='rviz2',
-        namespace='',
-        executable='rviz2',
-        name='rviz2',
-        arguments=['-d', rviz_dir],
-        output='screen')
-
     return LaunchDescription([
         driver_node,
-        rviz_node,
     ])
