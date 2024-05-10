@@ -58,7 +58,7 @@ Visualization Manager:
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 237
+      Max Intensity: 235
       Min Color: 0; 0; 0
       Min Intensity: 6
       Name: LaserScan
@@ -77,10 +77,17 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Class: rviz_default_plugins/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.10000000149011612
+      Reference Frame: <Fixed Frame>
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: laser_link
+    Fixed Frame: base_footprint
     Frame Rate: 30
   Name: root
   Tools:
@@ -122,26 +129,21 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Class: rviz_default_plugins/Orbit
-      Distance: 7.643159866333008
+      Angle: 0
+      Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
-      Focal Point:
-        X: 1.2394351959228516
-        Y: -0.5207616090774536
-        Z: -0.11915574967861176
-      Focal Shape Fixed Size: true
-      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Scale: 140.60121154785156
       Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 3.120417833328247
+      Value: TopDownOrtho (rviz_default_plugins)
+      X: 0.007112314458936453
+      Y: -0.26315563917160034
     Saved: ~
 Window Geometry:
   Displays:
